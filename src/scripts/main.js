@@ -1,7 +1,7 @@
 // Fetch stock data from stocks.json and update the HTML content
 async function fetchStockData() {
     try {
-        const response = await fetch('/data/stocks.json');
+        const response = await fetch('data/stocks.json');
         const stocks = await response.json();
         updateStockPrices(stocks);
     } catch (error) {
@@ -18,10 +18,7 @@ function updateStockPrices(stocks) {
     stocks.stocks.forEach(stock => {
         const listItem = document.createElement('li');
         listItem.classList.add('stock-item');
-        listItem.innerHTML = `
-            ${stock.name} (${stock.symbol}): 
-            <span class="stock-price">$${stock.price.toFixed(2)}</span>
-        `;
+        listItem.innerHTML = `${stock.name} (${stock.symbol}): $${stock.price.toFixed(2)}`;
         stockList.appendChild(listItem);
     });
 }

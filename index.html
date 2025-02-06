@@ -1,33 +1,21 @@
+stock_website/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Monitoring</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
     <h1>My Stock Portfolio</h1>
-    <div id="stock-list"></div>
+    <ul id="stock-list"></ul>
     <script src="src/scripts/main.js"></script>
     <script>
-        const response = await fetch('/data/stocks.json');
-
-        function updateStockPrices(stocks) {
-            const stockList = document.getElementById('stock-list');
-            stockList.classList.add('stock-list');
-            stockList.innerHTML = '';
-
-            stocks.stocks.forEach(stock => {
-                const listItem = document.createElement('li');
-                listItem.classList.add('stock-item');
-                listItem.innerHTML = `
-                    ${stock.name} (${stock.symbol}): 
-                    <span class="stock-price">$${stock.price.toFixed(2)}</span>
-                `;
-                stockList.appendChild(listItem);
-            });
-        }
+        // Initialize stock data on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchStockData();
+        });
     </script>
 </body>
 </html>
