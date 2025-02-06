@@ -1,0 +1,29 @@
+{
+  "stocks": [
+    {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "price": 150.00
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc.",
+      "price": 2800.00
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon.com Inc.",
+      "price": 3400.00
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "price": 299.00
+    },
+    {
+      "symbol": "TSLA",
+      "name": "Tesla Inc.",
+      "price": 800.00
+    }
+  ]
+}

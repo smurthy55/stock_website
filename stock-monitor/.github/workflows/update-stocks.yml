@@ -1,0 +1,28 @@
+name: Update Stocks
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update stocks.json
+        run: |
+          # Here you would add the script or command to update your stocks.json file
+          echo 'Updating stocks.json...'
+          # Example command to fetch new stock prices and update the file
+          # node updateStocks.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/stocks.json
+          git commit -m "Update stocks.json with latest prices"
+          git push
