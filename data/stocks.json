@@ -3,27 +3,17 @@
     {
       "symbol": "AAPL",
       "name": "Apple Inc.",
-      "price": 150.00
+      "price": 117.732848878213
     },
     {
       "symbol": "GOOGL",
       "name": "Alphabet Inc.",
-      "price": 2800.00
-    },
-    {
-      "symbol": "AMZN",
-      "name": "Amazon.com Inc.",
-      "price": 3400.00
+      "price": 114.5326184684131
     },
     {
       "symbol": "MSFT",
       "name": "Microsoft Corporation",
-      "price": 299.00
-    },
-    {
-      "symbol": "TSLA",
-      "name": "Tesla Inc.",
-      "price": 800.00
+      "price": 153.72476003639437
     }
   ]
 }
